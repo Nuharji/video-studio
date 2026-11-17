@@ -40,7 +40,7 @@ const fmtDur = s => {
 };
 
 /* ================= Settings and state ================= */
-const THEMES = ['dark', 'light', 'github', 'github-dark', 'cli', 'cli-amber', 'cli-cyan', 'cli-magenta', 'cli-white', 'midnight', 'dusk', 'graphite', 'contrast', 'sand', 'rose'];
+const THEMES = ['dark', 'light', 'github', 'github-dark', 'cli', 'cli-amber', 'cli-cyan', 'cli-magenta', 'cli-white', 'midnight', 'dusk', 'graphite', 'contrast', 'sand', 'rose', 'proton'];
 const DEF = {keys: {}, autoHide: false, lang: 'auto', theme: 'dark', dock: true, dockTab: 'media', snap: true, tlHeight: 300, pps: 40,
   volume: 1, quality: 'medium', format: '', imageSec: 5, titleSec: 4, restore: true};
 let settings = {...DEF}, recent = [], booted = false;
@@ -655,7 +655,7 @@ const A = {
   toggleAutoHide: () => { settings.autoHide = !settings.autoHide; applySettings(); },
   settings: () => openSettings(),
   langAuto: () => setLang('auto'), langEn: () => setLang('en'), langDe: () => setLang('de'),
-  themeDark: () => setTheme('dark'), themeLight: () => setTheme('light'), themeGithub: () => setTheme('github'), themeGithubDark: () => setTheme('github-dark'), themeCli: () => setTheme('cli'), themeCliAmber: () => setTheme('cli-amber'), themeCliCyan: () => setTheme('cli-cyan'), themeCliMagenta: () => setTheme('cli-magenta'), themeCliWhite: () => setTheme('cli-white'), themeMidnight: () => setTheme('midnight'), themeDusk: () => setTheme('dusk'), themeGraphite: () => setTheme('graphite'), themeContrast: () => setTheme('contrast'), themeSand: () => setTheme('sand'), themeRose: () => setTheme('rose'),
+  themeDark: () => setTheme('dark'), themeLight: () => setTheme('light'), themeGithub: () => setTheme('github'), themeGithubDark: () => setTheme('github-dark'), themeCli: () => setTheme('cli'), themeCliAmber: () => setTheme('cli-amber'), themeCliCyan: () => setTheme('cli-cyan'), themeCliMagenta: () => setTheme('cli-magenta'), themeCliWhite: () => setTheme('cli-white'), themeMidnight: () => setTheme('midnight'), themeDusk: () => setTheme('dusk'), themeGraphite: () => setTheme('graphite'), themeContrast: () => setTheme('contrast'), themeSand: () => setTheme('sand'), themeRose: () => setTheme('rose'), themeProton: () => setTheme('proton'),
   shortcuts: () => {
     let h = '';
     MENUS.forEach(([m, items]) => {
@@ -684,7 +684,7 @@ const MENUS = [
     ['langAuto', null, () => settings.lang === 'auto'], ['langEn', null, () => settings.lang === 'en'], ['langDe', null, () => settings.lang === 'de'],
     '-', '#menu.theme',
     ['themeDark', null, () => settings.theme === 'dark'], ['themeLight', null, () => settings.theme === 'light'],
-    ['themeGithub', null, () => settings.theme === 'github'], ['themeGithubDark', null, () => settings.theme === 'github-dark'], ['themeCli', null, () => settings.theme === 'cli'], ['themeCliAmber', null, () => settings.theme === 'cli-amber'], ['themeCliCyan', null, () => settings.theme === 'cli-cyan'], ['themeCliMagenta', null, () => settings.theme === 'cli-magenta'], ['themeCliWhite', null, () => settings.theme === 'cli-white'], ['themeMidnight', null, () => settings.theme === 'midnight'], ['themeDusk', null, () => settings.theme === 'dusk'], ['themeGraphite', null, () => settings.theme === 'graphite'], ['themeContrast', null, () => settings.theme === 'contrast'], ['themeSand', null, () => settings.theme === 'sand'], ['themeRose', null, () => settings.theme === 'rose']]],
+    ['themeGithub', null, () => settings.theme === 'github'], ['themeGithubDark', null, () => settings.theme === 'github-dark'], ['themeCli', null, () => settings.theme === 'cli'], ['themeCliAmber', null, () => settings.theme === 'cli-amber'], ['themeCliCyan', null, () => settings.theme === 'cli-cyan'], ['themeCliMagenta', null, () => settings.theme === 'cli-magenta'], ['themeCliWhite', null, () => settings.theme === 'cli-white'], ['themeMidnight', null, () => settings.theme === 'midnight'], ['themeDusk', null, () => settings.theme === 'dusk'], ['themeGraphite', null, () => settings.theme === 'graphite'], ['themeContrast', null, () => settings.theme === 'contrast'], ['themeSand', null, () => settings.theme === 'sand'], ['themeRose', null, () => settings.theme === 'rose'], ['themeProton', null, () => settings.theme === 'proton']]],
   ['help', [['shortcuts', 'F1'], '-', ['about']]]
 ];
 const hasClips = () => clipCount() > 0, hasSel = () => sel.size > 0;
